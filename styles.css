@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.site {
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a1a;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* ── Navigation ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 0.5px solid rgba(0,0,0,0.15);
+  margin-bottom: 3rem;
+}
+
+.nav-logo {
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #1a1a1a;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover {
+  color: #1a1a1a;
+}
+
+/* ── Hero / Abstract ── */
+.hero {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 0.5px solid rgba(0,0,0,0.15);
+}
+
+.hero-tag {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: 'Lora', serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+  max-width: 640px;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 2rem;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.hero-abstract {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555;
+  max-width: 680px;
+  border-left: 2px solid rgba(0,0,0,0.3);
+  padding-left: 1.25rem;
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: 3rem;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: rgba(0,0,0,0.15);
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Methodology ── */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 1.25rem;
+}
+
+.method-card {
+  background: #f5f5f3;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.method-card .step {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #aaa;
+  margin-bottom: 0.4rem;
+}
+
+.method-card .label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ── Charts ── */
+.chart-area {
+  border: 0.5px solid rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.chart-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.chart-sub {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.bar-label {
+  width: 80px;
+  color: #888;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.bar-track {
+  flex: 1;
+  height: 24px;
+  background: #f5f5f3;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  width: 0;
+  transition: width 1s ease;
+}
+
+.bar-val {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  color: #888;
+}
+
+.b1 { background: #185FA5; color: #B5D4F4; }
+.b2 { background: #0F6E56; color: #9FE1CB; }
+.b3 { background: #3C3489; color: #CECBF6; }
+.b4 { background: #993C1D; color: #F5C4B3; }
+
+/* ── Findings ── */
+.findings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 1.25rem 0;
+}
+
+.finding-card {
+  background: #ffffff;
+  border: 0.5px solid rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.finding-num {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.finding-desc {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.5;
+}
+
+.n-blue   { color: #185FA5; }
+.n-teal   { color: #0F6E56; }
+.n-purple { color: #3C3489; }
+
+/* ── Conclusion ── */
+.conclusion-box {
+  background: #f5f5f3;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.conclusion-box p {
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ── Edit buttons ── */
+.edit-btn {
+  display: inline-block;
+  font-size: 12px;
+  color: #555;
+  border: 0.5px solid rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 4px 12px;
+  cursor: pointer;
+  margin-top: 1rem;
+  background: transparent;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.edit-btn:hover {
+  background: #f5f5f3;
+}
+
+/* ── Footer ── */
+.footer {
+  border-top: 0.5px solid rgba(0,0,0,0.15);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #aaa;
+}
